@@ -2,16 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>SpaceOcean</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&family=Roboto+Condensed:wght@400&display=swap">
     <style>
-        body, html {
+        html, body {
             height: 100%;
             margin: 0;
-            font-family: Arial, sans-serif;
+            padding: 0;
+            width: 100%;
             overflow: hidden;
-            position: relative;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
         }
         .bg-video {
             position: fixed;
@@ -117,76 +120,3 @@
             text-align: center;
             outline: none;
             transition: all 0.3s ease-in-out;
-        }
-        .login-field input::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-            font-style: italic;
-            text-align: center;
-        }
-        .login-field input:focus {
-            background-color: rgba(255, 255, 255, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            color: white;
-        }
-        .login-field button {
-            margin-top: 1rem;
-            padding: 10px 20px;
-            background-color: rgba(0, 51, 102, 0.8);
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
-        }
-        .login-field button:hover {
-            background-color: rgba(0, 51, 102, 1);
-        }
-        footer {
-            background-color: rgba(0, 51, 102, 0.8);
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            z-index: 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .footer-right {
-            margin-left: auto;
-            color: rgba(255, 255, 255, 0.5);
-            transition: opacity 0.3s ease;
-        }
-        .footer-right:hover {
-            opacity: 1;
-        }
-    </style>
-</head>
-<body>
-    <div class="bg-video">
-        <iframe src="https://www.youtube.com/embed/BOeevH8A4wg?autoplay=1&loop=1&playlist=BOeevH8A4wg&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-    <div class="black-background"></div>
-    <div class="container">
-        <div class="logo-text-container">
-            <img src="logo-vortext-1.6-square.png" alt="O">
-            <div class="text">
-                <div class="space">Space</div>
-                <div class="cean">
-                    <span>C</span><span>E</span><span class="white-o">O</span><span>N</span>
-                </div>
-            </div>
-        </div>
-        <div class="login-field">
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
-            <button onclick="clearFields()">Login</button>
-        </div>
-    </div>
-    <footer>
-        <div class="footer-right">
-            &copy; 2024 SpaceOcean. All rights reserved.
-        </div>
-    </footer>
-</body>
-</html>

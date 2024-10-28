@@ -65,41 +65,30 @@
         }
         .logo-text-container {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: center;
             margin-bottom: 2rem;
             position: relative;
         }
-        .logo-text-container .text {
+        .logo-text-container img {
+            height: 6.6rem;
+            margin-right: 5px; /* Adjust this for desired spacing */
+        }
+        .text {
             font-size: 3rem;
             line-height: 1.2;
             text-align: center;
-            position: relative;
-            margin-left: 0.5rem; /* Matches spacing between letters in "CEAN" */
+            display: flex;
         }
-        .logo-text-container .text > .space {
+        .text .space {
             font-family: 'Montserrat', sans-serif;
             font-weight: 100;
-            position: relative;
-            top: 0;
-            left: 0;
         }
-        .logo-text-container .text > .cean {
+        .text .cean {
             font-family: 'Roboto Condensed', sans-serif;
             font-weight: 400;
-            position: relative;
-            bottom: 0;
-            left: 0;
             letter-spacing: 0.5rem;
-            display: flex;
-            justify-content: space-between;
-        }
-        .logo-text-container .cean span.white-o {
-            color: white;
-        }
-        .logo-text-container img {
-            height: 6.6rem;
-            margin-right: 20px; /* Increased to add space between logo and "Ocean" */
+            margin-left: 5px; /* Space between logo and "cean" */
         }
         .login-field {
             margin: 2rem 0;
@@ -131,62 +120,4 @@
         .login-field button {
             margin-top: 1rem;
             padding: 10px 20px;
-            background-color: rgba(0, 51, 102, 0.8);
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
-        }
-        .login-field button:hover {
-            background-color: rgba(0, 51, 102, 1);
-        }
-        footer {
-            background-color: rgba(0, 51, 102, 0.8);
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            z-index: 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .footer-right {
-            margin-left: auto;
-            color: rgba(255, 255, 255, 0.5);
-            transition: opacity 0.3s ease;
-        }
-        .footer-right:hover {
-            opacity: 1;
-        }
-    </style>
-</head>
-<body>
-    <div class="bg-video">
-        <iframe src="https://www.youtube.com/embed/BOeevH8A4wg?autoplay=1&loop=1&playlist=BOeevH8A4wg&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-    <div class="black-background"></div>
-    <div class="container">
-        <div class="logo-text-container">
-            <img src="logo-vortext-1.6-square_black.png" alt="Logo">
-            <div class="text">
-                <div class="space">Space</div>
-                <div class="cean">
-                    <span class="white-o">O</span><span>C</span><span>E</span><span>A</span><span>N</span>
-                </div>
-            </div>
-        </div>
-        <div class="login-field">
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
-            <button onclick="clearFields()">Login</button>
-        </div>
-    </div>
-    <footer>
-        <div class="footer-right">
-            &copy; 2024 SpaceOcean. All rights reserved.
-        </div>
-    </footer>
-</body>
-</html>
+            background-color: rgba(0, 51, 102, 0.

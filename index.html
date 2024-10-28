@@ -65,30 +65,36 @@
         }
         .logo-text-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
             margin-bottom: 2rem;
             position: relative;
         }
-        .logo-text-container img {
-            height: 6.6rem;
-            margin-right: 5px; /* Adjust this for desired spacing */
-        }
-        .text {
+        .logo-text-container .text {
             font-size: 3rem;
             line-height: 1.2;
             text-align: center;
-            display: flex;
         }
-        .text .space {
+        .logo-text-container .text .space {
             font-family: 'Montserrat', sans-serif;
             font-weight: 100;
+            margin-bottom: 0.5rem;
         }
-        .text .cean {
+        .logo-text-container .second-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-text-container img {
+            height: 6.6rem;
+            margin-right: 5px;
+        }
+        .cean {
             font-family: 'Roboto Condensed', sans-serif;
             font-weight: 400;
+            font-size: 3rem;
             letter-spacing: 0.5rem;
-            margin-left: 5px; /* Space between logo and "cean" */
+            margin-left: 5px;
         }
         .login-field {
             margin: 2rem 0;
@@ -158,9 +164,9 @@
     <div class="black-background"></div>
     <div class="container">
         <div class="logo-text-container">
-            <div class="text">
-                <div class="space">Space</div>
-                <img src="logo-vortext-1.6-square_black.png" alt="Logo">
+            <div class="text space">Space</div>
+            <div class="second-line">
+                <img src="logo-vortext-1.6-square.png" alt="Logo">
                 <div class="cean">cean</div>
             </div>
         </div>

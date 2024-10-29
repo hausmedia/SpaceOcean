@@ -47,38 +47,38 @@
             z-index: 1;
             position: fixed;
             top: 10%;
-            left: 5%;
+            right: 5%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            width: 300px;
         }
         .logo-text-container {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             margin-bottom: 2rem;
         }
-        .first-line {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
+        .logo-text-container img {
+            height: 7.5rem; /* Adjust to match combined height of "Space" and "cean" */
+            margin-right: 0.5rem; /* Spacing between logo and text */
         }
-        .first-line .space {
+        .text-lines {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Left-justify "Space" and "cean" */
+        }
+        .text-lines .space {
             font-family: 'Montserrat', sans-serif;
             font-weight: 100;
             font-size: 3rem;
-            margin-left: 0.5rem;
+            line-height: 1;
         }
-        .logo-text-container img {
-            height: 6.6rem;
-        }
-        .cean {
+        .text-lines .cean {
             font-family: 'Roboto Condensed', sans-serif;
             font-weight: 400;
             font-size: 3.5rem;
             letter-spacing: 0.5rem;
-            margin-left: 0.5rem; /* Adjust spacing if needed */
+            line-height: 1;
+            margin-top: -0.3rem; /* Fine-tune vertical alignment */
         }
         .login-field {
             margin: 2rem 0;
@@ -147,13 +147,11 @@
     <div class="black-background"></div>
     <div class="container">
         <div class="logo-text-container">
-            <!-- First Line: Logo + "Space" -->
-            <div class="first-line">
-                <img src="logo-vortext-1.6-square_black.png" alt="Logo">
+            <img src="logo-vortext-1.6-square_black.png" alt="Logo">
+            <div class="text-lines">
                 <div class="space">Space</div>
+                <div class="cean">CEAN</div>
             </div>
-            <!-- Second Line: "CEAN" -->
-            <div class="cean">CEAN</div>
         </div>
         <div class="login-field">
             <input type="text" id="username" placeholder="Username">

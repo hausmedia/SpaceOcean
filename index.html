@@ -43,34 +43,32 @@
         }
         .container {
             color: white;
-            text-align: center;
+            text-align: left;
             z-index: 1;
             position: fixed;
             top: 10%;
-            right: 5%;
+            left: 5%;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            width: calc(3rem * 2 + 6rem);
+            align-items: flex-start;
+            width: 300px;
         }
         .logo-text-container {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             margin-bottom: 2rem;
-            position: relative;
         }
         .first-line {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 0.3rem; /* Adjust spacing between logo and "Space" */
+            justify-content: flex-start;
         }
         .first-line .space {
             font-family: 'Montserrat', sans-serif;
             font-weight: 100;
             font-size: 3rem;
-            margin-left: 0; /* Remove default spacing for better alignment */
+            margin-left: 0.5rem;
         }
         .logo-text-container img {
             height: 6.6rem;
@@ -80,13 +78,13 @@
             font-weight: 400;
             font-size: 3.5rem;
             letter-spacing: 0.5rem;
-            margin-top: -1rem; /* Adjust vertical spacing for exact alignment */
+            margin-left: 0.5rem; /* Adjust spacing if needed */
         }
         .login-field {
             margin: 2rem 0;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             width: 100%;
         }
         .login-field input {
@@ -95,14 +93,13 @@
             color: rgba(255, 255, 255, 0);
             width: 100%;
             font-size: 1rem;
-            text-align: center;
+            text-align: left;
             outline: none;
             transition: all 0.3s ease-in-out;
         }
         .login-field input::placeholder {
             color: rgba(255, 255, 255, 0.7);
             font-style: italic;
-            text-align: center;
         }
         .login-field input:focus {
             background-color: rgba(255, 255, 255, 0.3);

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Ocean Landing Page</title>
-    <link rel="stylesheet" href="https://player.vimeo.com/video/1024972748?autoplay=1&loop=1&muted=1&background=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&family=Roboto+Condensed:wght@400&display=swap">
     <style>
         body, html {
             height: 100%;
@@ -142,7 +142,7 @@
 <body>
     <!-- Background Video -->
     <div class="bg-video">
-        <iframe src="https://player.vimeo.com/video/1024972748?autoplay=1&loop=1&muted=1&background=1" 
+        <iframe src="https://player.vimeo.com/video/1024972748?autoplay=1&loop=1&muted=1" 
                 frameborder="0" allow="autoplay; fullscreen; picture-in-picture" 
                 style="width:100%; height:100%;" title="Space Ocean Intro Video">
         </iframe>
@@ -171,7 +171,17 @@
         </div>
     </footer>
     
-    <!-- Vimeo API script (optional) -->
+    <!-- Vimeo API script and autoplay fallback -->
     <script src="https://player.vimeo.com/api/player.js"></script>
+    <script>
+        var iframe = document.querySelector('iframe');
+        var player = new Vimeo.Player(iframe);
+
+        // Mute and autoplay for extra reliability across browsers
+        player.setVolume(0);
+        player.play().catch(function(error) {
+            console.log('Autoplay failed:', error);
+        });
+    </script>
 </body>
 </html>

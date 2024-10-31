@@ -17,7 +17,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 70%; /* Adjust to fit full left side */
+            width: 100%;
             height: 100%;
             z-index: -1;
             overflow: hidden;
@@ -31,26 +31,21 @@
             transform: translate(-50%, -50%);
             pointer-events: none;
         }
-        .black-background {
+        .translucent-panel {
             position: fixed;
             top: 0;
-            left: 70%; /* Adjusted to start from 70% to create more space */
+            right: 0;
             width: 30%;
             height: 100%;
-            background-color: black;
-            z-index: 0;
-        }
-        .container {
-            color: white;
-            text-align: left;
-            z-index: 1;
-            position: fixed;
-            top: 10%;
-            right: 5%;
+            background-color: rgba(0, 0, 0, 0.7); /* Translucent black background */
+            padding: 2rem;
+            box-sizing: border-box;
+            z-index: 1; /* Ensure it is on top of the video */
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            width: 25%;
+            justify-content: center;
+            color: white;
         }
         .logo-text-container {
             display: flex;
@@ -81,14 +76,13 @@
             margin-top: -0.3rem;
         }
         .login-field {
-            margin: 2rem 0;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             width: 100%;
         }
         .login-field input {
-            background-color: rgba(255, 255, 255, 0);
+            background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent input background */
             border: 1px solid rgba(255, 255, 255, 0.5);
             color: white;
             width: 100%;
@@ -110,6 +104,7 @@
             cursor: pointer;
             font-size: 1rem;
             transition: background-color 0.3s ease;
+            width: 100%;
         }
         .login-field button:hover {
             background-color: rgba(0, 51, 102, 1);
@@ -144,9 +139,8 @@
         </iframe>
     </div>
 
-    <!-- Main Content Area -->
-    <div class="black-background"></div>
-    <div class="container">
+    <!-- Translucent Panel for Content -->
+    <div class="translucent-panel">
         <div class="logo-text-container">
             <img src="logo-vortext-1.6-square_black.png" alt="Logo">
             <div class="text-lines">

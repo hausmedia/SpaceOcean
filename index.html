@@ -10,8 +10,11 @@
             height: 100%;
             margin: 0;
             font-family: Arial, sans-serif;
-            overflow: hidden;
             background-color: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
         }
         .bg-video {
             position: fixed;
@@ -24,32 +27,20 @@
         }
         .bg-video iframe {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            transform: translate(-50%, -50%);
             pointer-events: none;
-        }
-        .black-background {
-            position: fixed;
-            top: 0;
-            left: 75%;
-            width: 25%;
-            height: 100%;
-            background-color: black;
-            z-index: 0;
         }
         .container {
             color: white;
             text-align: left;
-            z-index: 1;
-            position: fixed;
-            top: 10%;
-            right: 5%;
+            margin-right: 5%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            z-index: 1;
         }
         .logo-text-container {
             display: flex;
@@ -59,11 +50,6 @@
         .logo-text-container img {
             height: 7.5rem;
             margin-right: -1rem;
-        }
-        .text-lines {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
         }
         .text-lines .space {
             font-family: 'Montserrat', sans-serif;
@@ -87,71 +73,47 @@
             width: 100%;
         }
         .login-field input {
-            background-color: rgba(255, 255, 255, 0);
-            border: none;
-            color: rgba(255, 255, 255, 0);
-            width: 100%;
+            background-color: white;
+            color: black;
+            width: 200px;
+            padding: 10px;
+            margin-bottom: 1rem;
             font-size: 1rem;
+            border: none;
             text-align: left;
-            outline: none;
-            transition: all 0.3s ease-in-out;
-        }
-        .login-field input::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-            font-style: italic;
-        }
-        .login-field input:focus {
-            background-color: rgba(255, 255, 255, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            color: white;
+            border-radius: 5px;
         }
         .login-field button {
-            margin-top: 1rem;
             padding: 10px 20px;
-            background-color: rgba(0, 51, 102, 0.8);
+            background-color: #003366;
             color: white;
             border: none;
             cursor: pointer;
             font-size: 1rem;
-            transition: background-color 0.3s ease;
-        }
-        .login-field button:hover {
-            background-color: rgba(0, 51, 102, 1);
+            border-radius: 5px;
         }
         footer {
-            background-color: rgba(0, 51, 102, 0.8);
+            background-color: #003366;
             padding: 1rem;
-            position: fixed;
             width: 100%;
+            position: fixed;
             bottom: 0;
-            z-index: 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .footer-right {
-            margin-left: auto;
-            color: rgba(255, 255, 255, 0.5);
-            transition: opacity 0.3s ease;
-        }
-        .footer-right:hover {
-            opacity: 1;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
         }
     </style>
 </head>
 <body>
+
     <!-- Background Video -->
     <div class="bg-video">
-        <iframe src="https://player.vimeo.com/video/1024972748?autoplay=1&loop=1&muted=1"
-                frameborder="0" 
-                allow="autoplay; fullscreen; picture-in-picture"
-                style="width:100%; height:100%;" 
-                title="Space Ocean Intro Video">
+        <iframe src="https://player.vimeo.com/video/1024972748?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" title="SPACE OCEAN INTRO VID V2">
         </iframe>
     </div>
 
     <!-- Main Content -->
-    <div class="black-background"></div>
     <div class="container">
         <div class="logo-text-container">
             <img src="logo-vortext-1.6-square_black.png" alt="Logo">
@@ -168,29 +130,16 @@
     </div>
 
     <footer>
-        <div class="footer-right">
-            &copy; 2024 SpaceOcean. All rights reserved.
-        </div>
+        &copy; 2024 SpaceOcean. All rights reserved.
     </footer>
-    
-    <!-- Vimeo API script and autoplay enforcement -->
+
+    <!-- JavaScript to Clear Fields -->
     <script src="https://player.vimeo.com/api/player.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var iframe = document.querySelector('iframe');
-            var player = new Vimeo.Player(iframe);
-
-            // Ensure autoplay by setting volume to 0 and issuing play command
-            player.setVolume(0);
-            player.play().catch(function(error) {
-                console.warn('Autoplay attempt failed:', error);
-            });
-            
-            // Listen for 'play' event to confirm video is playing
-            player.on('play', function() {
-                console.log('Video is successfully playing');
-            });
-        });
+        function clearFields() {
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
+        }
     </script>
 </body>
 </html>

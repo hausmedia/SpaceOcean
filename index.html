@@ -31,21 +31,25 @@
             transform: translate(-50%, -50%);
             pointer-events: none;
         }
-        .translucent-panel {
+        .black-background {
             position: fixed;
             top: 0;
-            right: 0;
-            width: 30%;
+            left: 75%;
+            width: 25%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Translucent black background */
-            padding: 2rem;
-            box-sizing: border-box;
-            z-index: 1; /* Ensure it is on top of the video */
+            background-color: black;
+            z-index: 0;
+        }
+        .container {
+            color: white;
+            text-align: left;
+            z-index: 1;
+            position: fixed;
+            top: 10%;
+            right: 5%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: center;
-            color: white;
         }
         .logo-text-container {
             display: flex;
@@ -76,24 +80,30 @@
             margin-top: -0.3rem;
         }
         .login-field {
+            margin: 2rem 0;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             width: 100%;
         }
         .login-field input {
-            background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent input background */
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            color: white;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+            color: rgba(255, 255, 255, 0);
             width: 100%;
             font-size: 1rem;
-            padding: 0.5rem;
-            margin-top: 0.5rem;
+            text-align: left;
             outline: none;
+            transition: all 0.3s ease-in-out;
         }
         .login-field input::placeholder {
             color: rgba(255, 255, 255, 0.7);
             font-style: italic;
+        }
+        .login-field input:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: white;
         }
         .login-field button {
             margin-top: 1rem;
@@ -104,7 +114,6 @@
             cursor: pointer;
             font-size: 1rem;
             transition: background-color 0.3s ease;
-            width: 100%;
         }
         .login-field button:hover {
             background-color: rgba(0, 51, 102, 1);
@@ -135,12 +144,13 @@
     <div class="bg-video">
         <iframe src="https://player.vimeo.com/video/1024972748?autoplay=1&loop=1&muted=1"
                 frameborder="0" allow="autoplay; fullscreen; picture-in-picture" 
-                title="Space Ocean Intro Video">
+                style="width:100%; height:100%;" title="Space Ocean Intro Video">
         </iframe>
     </div>
 
-    <!-- Translucent Panel for Content -->
-    <div class="translucent-panel">
+    <!-- Main Content -->
+    <div class="black-background"></div>
+    <div class="container">
         <div class="logo-text-container">
             <img src="logo-vortext-1.6-square_black.png" alt="Logo">
             <div class="text-lines">

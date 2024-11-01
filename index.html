@@ -31,7 +31,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            object-fit: cover; /* Ensures full bleed without stretching */
+            object-fit: cover;
             pointer-events: none;
         }
         .overlay {
@@ -40,8 +40,8 @@
             right: 0;
             width: 30%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.6); /* Translucent black overlay */
-            backdrop-filter: blur(10px); /* Adds slight blur */
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
             padding: 2rem;
             display: flex;
             flex-direction: column;
@@ -108,6 +108,37 @@
             text-align: center;
             color: rgba(255, 255, 255, 0.7);
             z-index: 1;
+        }
+
+        /* Responsive adjustments for mobile */
+        @media (max-width: 768px) {
+            .overlay {
+                width: 100%;
+                height: auto;
+                padding: 1.5rem;
+                backdrop-filter: blur(8px);
+                align-items: center;
+                text-align: center;
+            }
+            .logo-text-container {
+                flex-direction: column;
+                margin-bottom: 1.5rem;
+            }
+            .logo-text-container img {
+                height: 6rem;
+                margin-right: 0;
+            }
+            .text-lines .space {
+                font-size: 2.5rem;
+            }
+            .text-lines .cean {
+                font-size: 2.8rem;
+                letter-spacing: 0.3rem;
+            }
+            .login-field input, .login-field button {
+                width: 100%;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>

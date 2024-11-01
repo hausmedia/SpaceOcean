@@ -119,8 +119,11 @@
         /* Responsive adjustments for mobile */
         @media (max-width: 768px) {
             .bg-video iframe {
+                width: 100vw;
+                height: 100vh;
                 object-fit: cover;
-                object-position: center top; /* Punches in vertically on mobile */
+                object-position: center 20%; /* Slightly shifts the video up to fill the frame vertically */
+                transform: scale(1.2); /* Scales up the video to ensure full vertical coverage */
             }
             .overlay {
                 width: 100%;

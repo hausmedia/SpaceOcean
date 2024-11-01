@@ -34,6 +34,7 @@
             object-fit: cover;
             object-position: center;
             pointer-events: none;
+            transform: scale(3.4);
         }
         .overlay {
             position: fixed;
@@ -123,7 +124,7 @@
                 height: 100vh;
                 object-fit: cover;
                 object-position: center center;
-                transform: scale(3.4); /* Doubling the zoom for full vertical coverage */
+                transform: scale(3.4); /* Ensures full vertical coverage */
             }
             .overlay {
                 width: 100%;
@@ -132,6 +133,8 @@
                 backdrop-filter: blur(8px);
                 align-items: center;
                 text-align: center;
+                justify-content: flex-start; /* Align content to top */
+                margin-top: 5vh; /* Adds top margin for visibility */
             }
             .logo-text-container {
                 flex-direction: row;
@@ -175,4 +178,22 @@
             </div>
         </div>
         <div class="login-field">
-           
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="clearFields()">Login</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 SpaceOcean. All rights reserved.
+    </footer>
+
+    <!-- JavaScript to Clear Fields -->
+    <script>
+        function clearFields() {
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
+        }
+    </script>
+</body>
+</html>

@@ -13,14 +13,14 @@
             overflow: hidden;
             background-color: black;
         }
+        /* Background Video Styling */
         .bg-video {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
-            overflow: hidden;
+            z-index: -10; /* Ensure it’s behind all other content */
         }
         .bg-video iframe {
             position: absolute;
@@ -29,15 +29,15 @@
             width: 100%;
             height: 100%;
             transform: translate(-50%, -50%);
-            pointer-events: none;
         }
+        /* Translucent Panel for Content */
         .translucent-panel {
             position: fixed;
             top: 0;
             right: 0;
             width: 30%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Translucent black background */
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 2rem;
             box-sizing: border-box;
             z-index: 1; /* Ensure it is on top of the video */
@@ -82,10 +82,10 @@
             width: 100%;
         }
         .login-field input {
-            background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent input background */
+            background-color: rgba(255, 255, 255, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.5);
             color: white;
-            width: 80%; /* Adjust width to fit within padding */
+            width: 80%;
             font-size: 1rem;
             padding: 0.5rem;
             margin-top: 0.5rem;
@@ -105,7 +105,7 @@
             cursor: pointer;
             font-size: 1rem;
             transition: background-color 0.3s ease;
-            width: 80%; /* Adjust width to fit within padding */
+            width: 80%;
         }
         .login-field button:hover {
             background-color: rgba(0, 51, 102, 1);

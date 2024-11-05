@@ -9,7 +9,8 @@ body, html {
     height: 100%;
     overflow: hidden;
     font-family: Arial, sans-serif;
-    color: #000000;
+    color: #ffffff;
+    background-color: #000000; /* Set background color to black */
 }
 
 /* Background Video */
@@ -34,28 +35,28 @@ body, html {
 }
 
 /* Login Container and Blur Panel */
+.blur-panel {
+    position: absolute;
+    left: 5%; /* Aligns with the left edge of the red line */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 320px; /* Adjust width as necessary for content */
+    padding: 20px;
+    height: 1280px; /* Set height as per your update */
+    background: rgba(0, 0, 0, 0.6); /* Translucent black background */
+    backdrop-filter: blur(10px); /* Blur effect on background video */
+    border-radius: 10px;
+    z-index: 1; /* Sits below the content in login-container */
+}
+
 .login-container {
     position: absolute;
-    right: 5%;
+    left: 5%; /* Aligns with the left edge of the red line */
     top: 50%;
     transform: translateY(-50%);
     color: #fff;
     text-align: center;
     z-index: 2; /* Ensures it sits on top of the blur panel */
-}
-
-.blur-panel {
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 320px; /* Adjust width as necessary for content */
-    padding: 30px 20px;
-    height: 1280px; /* Increased height to cover all elements */
-    background: rgba(0, 0, 0, 0.6); /* Translucent black background */
-    backdrop-filter: blur(10px); /* Blur effect on background video */
-    border-radius: 10px;
-    z-index: 1; /* Sits below the content in login-container */
 }
 
 /* Logo and Text Styling */
@@ -79,7 +80,7 @@ body, html {
 }
 
 .logo-o {
-    width: 90px; /* Adjust size to match height of "Space" and "CEAN" */
+    width: 90px; /* Set logo size as per update */
     height: 90px;
 }
 

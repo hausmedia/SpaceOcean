@@ -12,6 +12,7 @@ body, html {
     color: #ffffff;
 }
 
+/* Background Video */
 .video-background {
     position: fixed;
     top: 0;
@@ -32,6 +33,7 @@ body, html {
     pointer-events: none;
 }
 
+/* Login Container and Blur Panel */
 .login-container {
     position: absolute;
     right: 5%;
@@ -39,8 +41,24 @@ body, html {
     transform: translateY(-50%);
     color: #fff;
     text-align: center;
+    z-index: 2; /* Ensures it sits on top of the blur panel */
 }
 
+.blur-panel {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px; /* Adjust as necessary for content width */
+    padding: 20px;
+    height: auto;
+    background: rgba(0, 0, 0, 0.6); /* Translucent black background */
+    backdrop-filter: blur(10px); /* Blur effect on background video */
+    border-radius: 10px;
+    z-index: 1; /* Sits below the content in login-container */
+}
+
+/* Logo and Text Styling */
 .logo-container {
     display: flex;
     flex-direction: column;
@@ -70,6 +88,7 @@ body, html {
     letter-spacing: 0.1rem;
 }
 
+/* Form Styling */
 .login-form {
     display: flex;
     flex-direction: column;
@@ -107,7 +126,7 @@ body, html {
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
-    .login-container {
+    .login-container, .blur-panel {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);

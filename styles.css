@@ -1,146 +1,39 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Ocean Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-background">
+        <iframe
+            src="https://player.vimeo.com/video/1024972748?background=1&autoplay=1&loop=1&muted=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            class="background-video">
+        </iframe>
+    </div>
+    
+    <!-- Blur Panel Wrapper -->
+    <div class="blur-panel"></div>
 
-body, html {
-    height: 100%;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-    color: #ffffff;
-    background-color: #000000; /* Set background color to black */
-}
-
-/* Background Video */
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.background-video {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-}
-
-/* Login Container and Blur Panel */
-.blur-panel {
-    position: absolute;
-    left: 5%; /* Aligns with the left edge of the red line */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 320px; /* Adjust width as necessary for content */
-    padding: 20px;
-    height: 1280px; /* Set height as per your update */
-    background: rgba(0, 0, 0, 0.6); /* Translucent black background */
-    backdrop-filter: blur(10px); /* Blur effect on background video */
-    border-radius: 10px;
-    z-index: 1; /* Sits below the content in login-container */
-}
-
-.login-container {
-    position: absolute;
-    left: 5%; /* Aligns with the left edge of the red line */
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
-    text-align: center;
-    z-index: 2; /* Ensures it sits on top of the blur panel */
-}
-
-/* Logo and Text Styling */
-.logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-bottom: 20px;
-}
-
-.space-text {
-    font-size: 2.5rem;
-    font-weight: 300;
-    margin-right: 10px;
-}
-
-.logo-ocean {
-    display: flex;
-    align-items: center;
-    gap: 5px; /* Space between logo and text */
-}
-
-.logo-o {
-    width: 90px; /* Set logo size as per update */
-    height: 90px;
-}
-
-.ocean-text {
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 0.1rem;
-}
-
-/* Form Styling */
-.login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-top: 20px;
-}
-
-.login-form input {
-    margin: 10px 0;
-    padding: 10px;
-    font-size: 1rem;
-    background-color: #1a1a1a;
-    border: 1px solid #444;
-    border-radius: 5px;
-    color: #fff;
-    outline: none;
-    width: 200px;
-    text-align: left;
-}
-
-.login-form button {
-    padding: 10px;
-    font-size: 1rem;
-    background-color: #003366;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100px;
-}
-
-.login-form button:hover {
-    background-color: #002244;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .login-container, .blur-panel {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-    }
-
-    .background-video {
-        height: auto;
-        width: 100vw;
-    }
-
-    .logo-container, .login-form {
-        align-items: center;
-    }
-}
+    <div class="login-container">
+        <div class="logo-container">
+            <span class="space-text">Space</span>
+            <div class="logo-ocean">
+                <img src="logo-vortext-1.6-square_black.png" alt="O in Ocean Logo" class="logo-o">
+                <span class="ocean-text">CEAN</span>
+            </div>
+        </div>
+        <form class="login-form">
+            <input type="text" placeholder="Username" id="username">
+            <input type="password" placeholder="Password" id="password">
+            <button type="button" id="login-button">Login</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -22,6 +22,7 @@ body, html {
     height: 100vh;
     overflow: hidden;
     z-index: -1;
+    background-color: #000000; /* Black background fallback */
 }
 
 .background-video {
@@ -37,7 +38,7 @@ body, html {
 /* Login Container and Blur Panel */
 .blur-panel {
     position: absolute;
-    left: 5%; /* Aligns with the left edge of the red line */
+    left: 100px; /* Position approx 100px from the left edge */
     top: 50%;
     transform: translateY(-50%);
     width: 320px; /* Adjust width as necessary for content */
@@ -51,7 +52,7 @@ body, html {
 
 .login-container {
     position: absolute;
-    left: 5%; /* Aligns with the left edge of the red line */
+    left: 100px; /* Position approx 100px from the left edge */
     top: 50%;
     transform: translateY(-50%);
     color: #fff;

@@ -10,6 +10,7 @@ body, html {
     overflow: hidden;
     font-family: Arial, sans-serif;
     color: #ffffff;
+    background-color: #000000; /* Set background color to black */
 }
 
 /* Background Video */
@@ -20,7 +21,8 @@ body, html {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    z-index: -1;
+    z-index: 0; /* Correct z-index for video to appear above body background but behind overlays */
+    background-color: #000000; /* Black background fallback */
 }
 
 .background-video {
@@ -33,29 +35,30 @@ body, html {
     pointer-events: none;
 }
 
-/* Login Container and Blur Panel */
+/* Blur Panel Overlay */
+.blur-panel {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 320px;
+    padding: 20px;
+    height: 1280px; /* Adjust height as needed */
+    background: rgba(0, 0, 0, 0.6); /* Translucent black overlay */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 10px;
+    z-index: 1; /* Sits over the video */
+}
+
+/* Content Container */
 .login-container {
     position: absolute;
-    right: 5%;
+    left: 100px;
     top: 50%;
     transform: translateY(-50%);
     color: #fff;
     text-align: center;
-    z-index: 2; /* Ensures it sits on top of the blur panel */
-}
-
-.blur-panel {
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 300px; /* Adjust as necessary for content width */
-    padding: 20px;
-    height: auto;
-    background: rgba(0, 0, 0, 0.6); /* Translucent black background */
-    backdrop-filter: blur(10px); /* Blur effect on background video */
-    border-radius: 10px;
-    z-index: 1; /* Sits below the content in login-container */
+    z-index: 2; /* Sits on top of both blur panel and video */
 }
 
 /* Logo and Text Styling */
@@ -67,7 +70,7 @@ body, html {
 }
 
 .space-text {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 300;
     margin-right: 10px;
 }
@@ -75,15 +78,16 @@ body, html {
 .logo-ocean {
     display: flex;
     align-items: center;
+    gap: 5px; /* Space between logo and text */
 }
 
 .logo-o {
-    width: 60px; /* Adjust size as needed */
-    margin-right: 5px;
+    width: 90px; /* Set logo size */
+    height: 90px;
 }
 
 .ocean-text {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
 }

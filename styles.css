@@ -51,7 +51,7 @@ body, html {
     transform: translateY(-50%);
     width: 320px; /* Adjust width as necessary for content */
     padding: 30px 20px;
-    height: 280px; /* Increased height to cover all elements */
+    height: 1280px; /* Increased height to cover all elements */
     background: rgba(0, 0, 0, 0.6); /* Translucent black background */
     backdrop-filter: blur(10px); /* Blur effect on background video */
     border-radius: 10px;

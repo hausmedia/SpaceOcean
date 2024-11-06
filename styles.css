@@ -59,7 +59,7 @@ body, html {
     font-size: 2.7rem; /* Adjust font size for better alignment */
     color: #fff;
     margin-bottom: -0.5rem; /* Adjust to control spacing above the logo */
-    padding-left: 50px;
+    padding-left: 80px;
 }
 
 .logo-ocean {
@@ -68,10 +68,10 @@ body, html {
 }
 
 .logo-o {
-    height: 6rem; /* Adjust for visual alignment with text height */
+    height: 4.75rem; /* Adjust for visual alignment with text height */
     width: auto;
-    margin-right: 2px; /* Fine-tune to align with "CEAN" */
-    transform: translateY(-5px); /* Adjust the value to move the logo up */
+    margin-right: 12px; /* Fine-tune to align with "CEAN" */
+    transform: translateY(-36px); /* Adjust the value to move the logo up */
 }
 
 .ocean-text {
@@ -79,7 +79,8 @@ body, html {
     font-weight: 700;
     color: #fff;
     letter-spacing: 0.1rem;
-    margin-left: -4px; /* Fine-tune for spacing between logo and "CEAN" */
+    margin-left: -12px; /* Fine-tune for spacing between logo and "CEAN" */
+    transform: translateY(-18px); /* Adjust the value to move "CEAN" up */
 }
 
 /* Login Form Styling */

@@ -1,6 +1,6 @@
-/* Set Entire Page Background to Black */
+/* Ensure Entire Page Background is Black */
 body, html {
-    background-color: black; /* Ensures full black background for the page */
+    background-color: black; /* Black background to cover full page */
     margin: 0;
     padding: 0;
     height: 100%;
@@ -35,7 +35,7 @@ body, html {
     transform: translateY(-50%);
     width: 35%; /* Adjusted width to fit on the right */
     padding: 20px;
-    background: rgba(0, 0, 0, 0.7); /* Improved readability */
+    background: rgba(0, 0, 0, 0.6); /* Improved readability without blocking video */
     backdrop-filter: blur(15px);
     border-radius: 10px;
     z-index: 1;
@@ -64,18 +64,19 @@ body, html {
 .logo-ocean {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
 .logo-o {
-    height: 80px; /* Adjust to align with text height */
+    height: 100px; /* Adjusted for perfect alignment with text */
     width: auto;
+    margin-right: -10px; /* Fine-tune spacing to act as "O" in Ocean */
 }
 
 .ocean-text {
     font-size: 3rem;
     font-weight: 700;
     color: #fff;
+    letter-spacing: 0.1rem;
 }
 
 /* Login Form Styling */

@@ -1,74 +1,91 @@
-/* Adjusted Blur Panel */
+/* Full-bleed Background Video */
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -10; /* Ensure it stays behind all other content */
+}
+
+.bg-video iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Allows other elements to remain clickable */
+}
+
+/* Centered Blur Panel */
 .blur-panel {
     position: absolute;
-    left: 0;
     top: 50%;
-    transform: translateY(-50%);
-    width: 60%; /* Extended width */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
     padding: 20px;
-    height: auto; /* Adjust height dynamically */
-    background: rgba(0, 0, 0, 0.7); /* Increased opacity for better readability */
-    backdrop-filter: blur(15px); /* Slightly increased blur effect */
+    background: rgba(0, 0, 0, 0.6); /* Improved readability */
+    backdrop-filter: blur(15px);
     border-radius: 10px;
     z-index: 1;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center elements within the panel */
-    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-/* Adjusted Content Layout */
-.login-container {
-    text-align: center;
-    z-index: 2;
-    color: #fff;
-}
-
+/* Logo and Text Alignment */
 .logo-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the logo and text */
+    align-items: center;
+    text-align: center;
     margin-bottom: 20px;
 }
 
 .space-text {
-    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
+    font-size: 3rem;
+    color: #fff;
 }
 
 .logo-ocean {
     display: flex;
     align-items: center;
-    gap: 10px; /* Increased spacing between logo and text */
+    gap: 10px;
 }
 
 .logo-o {
-    height: 80px; /* Adjust to match text height, tweak as necessary */
+    height: 80px; /* Scaled to match text */
     width: auto;
 }
 
 .ocean-text {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    letter-spacing: 0.1rem;
+    color: #fff;
 }
 
-/* Form Styling */
+/* Login Form Styling */
 .login-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    width: 100%;
 }
 
 .login-form input {
     margin: 10px 0;
     padding: 10px;
     font-size: 1rem;
-    background-color: #1a1a1a;
+    background-color: #333;
     border: 1px solid #444;
     border-radius: 5px;
-    color: #fff;
+    color: white;
     width: 80%;
     text-align: left;
 }
@@ -77,7 +94,7 @@
     padding: 10px;
     font-size: 1rem;
     background-color: #003366;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -88,12 +105,8 @@
     background-color: #002244;
 }
 
-/* Mobile Adjustments */
 @media (max-width: 768px) {
     .blur-panel {
-        width: 90%;
-    }
-    .login-container, .logo-container, .login-form {
-        align-items: center;
+        width: 80%; /* Responsive adjustment */
     }
 }

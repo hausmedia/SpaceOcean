@@ -14,7 +14,7 @@ body, html {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    z-index: 0; /* Video is above the body background */
+    z-index: 0;
 }
 
 .bg-video iframe {
@@ -30,19 +30,18 @@ body, html {
 /* Right-Aligned Blur Panel */
 .blur-panel {
     position: absolute;
-    top: 50%;
+    top: 0;
     right: 5%;
-    transform: translateY(-50%);
-    width: 35%;
+    width: 25%; /* 30% narrower than before */
+    height: 100vh; /* Extends vertically */
     padding: 20px;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);
-    border-radius: 10px;
-    z-index: 1; /* Panel is above the video */
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
+    z-index: 1;
 }
 
 /* Logo and Text Alignment */
@@ -57,8 +56,9 @@ body, html {
 .space-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #fff;
+    margin-bottom: -0.5rem;
 }
 
 .logo-ocean {
@@ -67,13 +67,13 @@ body, html {
 }
 
 .logo-o {
-    height: 100px; /* Adjusted for perfect alignment with text */
+    height: 2.8rem;
     width: auto;
-    margin-right: -10px; /* Fine-tune spacing to act as "O" in Ocean */
+    margin-right: -8px;
 }
 
 .ocean-text {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #fff;
     letter-spacing: 0.1rem;
@@ -95,7 +95,7 @@ body, html {
     border: 1px solid #444;
     border-radius: 5px;
     color: white;
-    width: 90%; /* Reduced width to fit within the smaller panel */
+    width: 90%;
     text-align: left;
 }
 
@@ -107,7 +107,7 @@ body, html {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 50%; /* Adjusted button width for better fit */
+    width: 50%;
 }
 
 .login-form button:hover {
@@ -117,10 +117,10 @@ body, html {
 /* Responsive Adjustments for Mobile */
 @media (max-width: 768px) {
     .blur-panel {
-        width: 80%; /* Responsive adjustment */
-        right: auto; /* Center align on mobile */
+        width: 80%;
+        right: auto;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 0);
     }
     .login-form input {
         width: 100%;

@@ -1,6 +1,6 @@
 /* Ensure Entire Page Background is Black */
 body, html {
-    background-color: black; /* Black background to cover full page */
+    background-color: black;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -14,7 +14,7 @@ body, html {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    z-index: -10; /* Ensure it stays behind all other content */
+    z-index: 0; /* Video is above the body background */
 }
 
 .bg-video iframe {
@@ -24,21 +24,21 @@ body, html {
     width: 100vw;
     height: 100vh;
     transform: translate(-50%, -50%);
-    pointer-events: none; /* Allows other elements to remain clickable */
+    pointer-events: none;
 }
 
 /* Right-Aligned Blur Panel */
 .blur-panel {
     position: absolute;
     top: 50%;
-    right: 5%; /* Move panel to the right side */
+    right: 5%;
     transform: translateY(-50%);
-    width: 35%; /* Adjusted width to fit on the right */
+    width: 35%;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.6); /* Improved readability without blocking video */
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);
     border-radius: 10px;
-    z-index: 1;
+    z-index: 1; /* Panel is above the video */
     display: flex;
     flex-direction: column;
     align-items: center;

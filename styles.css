@@ -1,3 +1,11 @@
+/* Set Entire Page Background to Black */
+body, html {
+    background-color: black; /* Ensures full black background for the page */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 /* Full-bleed Background Video */
 .bg-video {
     position: fixed;
@@ -19,15 +27,15 @@
     pointer-events: none; /* Allows other elements to remain clickable */
 }
 
-/* Centered Blur Panel */
+/* Right-Aligned Blur Panel */
 .blur-panel {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
+    right: 5%; /* Move panel to the right side */
+    transform: translateY(-50%);
+    width: 35%; /* Adjusted width to fit on the right */
     padding: 20px;
-    background: rgba(0, 0, 0, 0.6); /* Improved readability */
+    background: rgba(0, 0, 0, 0.7); /* Improved readability */
     backdrop-filter: blur(15px);
     border-radius: 10px;
     z-index: 1;
@@ -60,7 +68,7 @@
 }
 
 .logo-o {
-    height: 80px; /* Scaled to match text */
+    height: 80px; /* Adjust to align with text height */
     width: auto;
 }
 
@@ -86,7 +94,7 @@
     border: 1px solid #444;
     border-radius: 5px;
     color: white;
-    width: 80%;
+    width: 90%; /* Reduced width to fit within the smaller panel */
     text-align: left;
 }
 
@@ -98,15 +106,25 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100px;
+    width: 50%; /* Adjusted button width for better fit */
 }
 
 .login-form button:hover {
     background-color: #002244;
 }
 
+/* Responsive Adjustments for Mobile */
 @media (max-width: 768px) {
     .blur-panel {
         width: 80%; /* Responsive adjustment */
+        right: auto; /* Center align on mobile */
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .login-form input {
+        width: 100%;
+    }
+    .login-form button {
+        width: 80%;
     }
 }

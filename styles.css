@@ -1,89 +1,50 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
-    height: 100%;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-    color: #ffffff;
-    background-color: #000000; /* Set background color to black */
-}
-
-/* Background Video */
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    z-index: 0; /* Correct z-index for video to appear above body background but behind overlays */
-    background-color: #000000; /* Black background fallback */
-}
-
-.background-video {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-}
-
-/* Blur Panel Overlay */
+/* Adjusted Blur Panel */
 .blur-panel {
     position: absolute;
-    left: 10px;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 220px;
+    width: 60%; /* Extended width */
     padding: 20px;
-    height: 1280px; /* Adjust height as needed */
-    background: rgba(0, 0, 0, 0.6); /* Translucent black overlay */
-    backdrop-filter: blur(10px); /* Blur effect */
+    height: auto; /* Adjust height dynamically */
+    background: rgba(0, 0, 0, 0.7); /* Increased opacity for better readability */
+    backdrop-filter: blur(15px); /* Slightly increased blur effect */
     border-radius: 10px;
-    z-index: 1; /* Sits over the video */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center elements within the panel */
+    justify-content: center;
 }
 
-/* Content Container */
+/* Adjusted Content Layout */
 .login-container {
-    position: absolute;
-    left: 100px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
     text-align: center;
-    z-index: 2; /* Sits on top of both blur panel and video */
+    z-index: 2;
+    color: #fff;
 }
 
-/* Logo and Text Styling */
 .logo-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center; /* Center the logo and text */
     margin-bottom: 20px;
 }
 
 .space-text {
     font-size: 2.5rem;
     font-weight: 300;
-    margin-right: 10px;
 }
 
 .logo-ocean {
     display: flex;
     align-items: center;
-    gap: 5px; /* Space between logo and text */
+    gap: 10px; /* Increased spacing between logo and text */
 }
 
 .logo-o {
-    width: 90px; /* Set logo size */
-    height: 90px;
+    height: 80px; /* Adjust to match text height, tweak as necessary */
+    width: auto;
 }
 
 .ocean-text {
@@ -96,7 +57,7 @@ body, html {
 .login-form {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     margin-top: 20px;
 }
 
@@ -108,8 +69,7 @@ body, html {
     border: 1px solid #444;
     border-radius: 5px;
     color: #fff;
-    outline: none;
-    width: 200px;
+    width: 80%;
     text-align: left;
 }
 
@@ -130,19 +90,10 @@ body, html {
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
-    .login-container, .blur-panel {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
+    .blur-panel {
+        width: 90%;
     }
-
-    .background-video {
-        height: auto;
-        width: 100vw;
-    }
-
-    .logo-container, .login-form {
+    .login-container, .logo-container, .login-form {
         align-items: center;
     }
 }

@@ -59,6 +59,7 @@ body, html {
     font-size: 2.7rem; /* Adjust font size for better alignment */
     color: #fff;
     margin-bottom: -0.5rem; /* Adjust to control spacing above the logo */
+    margin-right: 2px;
 }
 
 .logo-ocean {

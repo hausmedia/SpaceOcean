@@ -69,7 +69,7 @@ body, html {
 .logo-o {
     height: 3rem; /* Adjust for visual alignment with text height */
     width: auto;
-    margin-right: -12px; /* Fine-tune to align with "CEAN" */
+    margin-right: -16px; /* Fine-tune to align with "CEAN" */
 }
 
 .ocean-text {

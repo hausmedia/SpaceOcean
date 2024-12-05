@@ -6,7 +6,7 @@
     <title>Board of Directors - Space Ocean Corp</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* General Page Styling */
+        /* General Styling */
         body, html {
             margin: 0;
             padding: 0;
@@ -15,7 +15,7 @@
             color: white;
         }
 
-        /* Header Logo and Navigation */
+        /* Header Styling */
         .header {
             display: flex;
             justify-content: space-between;
@@ -25,7 +25,7 @@
         }
 
         .header-logo {
-            height: 50px; /* Rescaled logo for better proportion */
+            height: 50px;
             width: auto;
         }
 
@@ -45,7 +45,7 @@
             color: #00aaff;
         }
 
-        /* Main Content Styling */
+        /* Main Content */
         .main {
             padding: 40px 20px;
         }
@@ -69,10 +69,62 @@
             font-size: 1rem;
             line-height: 1.5;
         }
+
+        .board-member a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+
+        .board-member a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Adjustments for Mobile */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .board-title {
+                font-size: 2rem;
+            }
+
+            .board-member h2 {
+                font-size: 1.3rem;
+            }
+
+            .board-member p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main {
+                padding: 20px 10px;
+            }
+
+            .board-title {
+                font-size: 1.8rem;
+            }
+
+            .board-member h2 {
+                font-size: 1.2rem;
+            }
+
+            .board-member p {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header class="header">
         <img src="logo-vortext-1.6-square.png" alt="Space Ocean Logo" class="header-logo">
         <nav class="nav-links">
@@ -81,54 +133,53 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="main">
         <h1 class="board-title">Board of Directors</h1>
-        
+
         <!-- Board Members -->
         <section class="board-member">
-            <h2>Paul S. Mamakos</h2>
-            <p>Founder and CEO of Space Ocean Corp, spearheading innovations in satellite logistics for water transport.</p>
+            <h2><a href="https://www.linkedin.com/in/paul-s-mamakos-356a" target="_blank">Paul S. Mamakos</a></h2>
+            <p>The founder and CEO of Space Ocean Corp, brings his NASA internship experience, entrepreneurial success, and medical technology knowledge to spearhead innovative satellite logistics for water transport. His diverse background ensures a holistic approach to managing and advancing space-based water management technologies.</p>
         </section>
         <section class="board-member">
-            <h2>Dr. Alberto Vasquez-Marquez</h2>
-            <p>Entrepreneur with 30+ years of experience in business and service chain optimization, focusing on industries like energy, space, and technology.</p>
+            <h2><a href="https://www.linkedin.com/in/alberto-vasquez-a16212/" target="_blank">Dr. Alberto Vasquez-Marquez</a></h2>
+            <p>Seasoned entrepreneur with over thirty years of experience in business and service chain optimization, including advanced production, logistics, and corporate governance.</p>
         </section>
         <section class="board-member">
-            <h2>Alden Fuchs</h2>
-            <p>CTO and systems engineering expert with over 20 years in satellite communications, cognitive radios, and AI-driven innovations.</p>
+            <h2><a href="https://www.linkedin.com/in/alden-fuchs/" target="_blank">Alden Fuchs</a></h2>
+            <p>CTO of Space Ocean Corp with over 20 years of experience in innovative hardware and software solutions, particularly in satellite communications and advanced technologies like cognitive radios and AI.</p>
         </section>
         <section class="board-member">
-            <h2>John W. Kovalsky</h2>
-            <p>President of Space Ocean Corp., specializing in unmanned systems, logistics, and military coordination.</p>
+            <h2><a href="https://www.linkedin.com/in/john-w-kovalsky-10700514/" target="_blank">John W. Kovalsky</a></h2>
+            <p>President of Space Ocean Corp., where he leads strategic initiatives and operations, focusing on advancing mission development in space exploration.</p>
         </section>
         <section class="board-member">
-            <h2>Roxanne Khazarian</h2>
-            <p>Legal strategist with expertise in M&A, global compliance, and international business development.</p>
+            <h2><a href="https://www.linkedin.com/in/roxanne-khazarian-5142001/" target="_blank">Roxanne Khazarian</a></h2>
+            <p>Extensive experience as Counsel and executive advisor, specializing in M&A, finance, global compliance, and business development for both private and public companies.</p>
         </section>
         <section class="board-member">
-            <h2>Gabe Tanenhaus</h2>
-            <p>Chief Content Officer and media innovator with extensive experience in creating and distributing content for major platforms.</p>
+            <h2><a href="https://www.linkedin.com/in/gabe-tanenhaus-3831b41/" target="_blank">Gabe Tanenhaus</a></h2>
+            <p>Chief Content Officer at Space Ocean Corp, with over two decades of media innovation, having shaped content creation and distribution for giants like HBO and MTV.</p>
         </section>
         <section class="board-member">
-            <h2>Tri Caodo</h2>
-            <p>Senior Principal Systems Engineer with over 25 years of aerospace experience, specializing in acquisition, test, and evaluation of space systems.</p>
+            <h2><a href="https://www.linkedin.com/in/tri-caodo-9895292a/" target="_blank">Tri Caodo</a></h2>
+            <p>Senior Principal Systems Engineer with over 25 years of aerospace industry experience in acquisition, test and evaluation, and systems engineering of space systems.</p>
         </section>
         <section class="board-member">
-            <h2>Cliff Silver</h2>
-            <p>Accomplished CFO with over 20 years of financial leadership experience, focusing on driving profitability and corporate growth.</p>
+            <h2><a href="https://www.linkedin.com/in/clifford-silver/" target="_blank">Cliff Silver</a></h2>
+            <p>Accomplished CFO with over 20 years of financial leadership experience, focusing on managing complex financial operations and driving profitability.</p>
         </section>
         <section class="board-member">
-            <h2>Pete Freeland</h2>
+            <h2><a href="https://www.linkedin.com/in/pete-freeland-9b977810/" target="_blank">Pete Freeland</a></h2>
             <p>Veteran aerospace designer and operator with 35+ years of experience in spacecraft, research vehicles, and satellite programs.</p>
         </section>
         <section class="board-member">
-            <h2>Michael Huber</h2>
-            <p>Chief Innovation Officer with 20+ years of intelligence analysis experience, focusing on WMD and counterterrorism innovation strategies.</p>
+            <h2><a href="https://www.linkedin.com/in/mike-huber-3870b023/" target="_blank">Michael Huber</a></h2>
+            <p>Chief Innovation Officer with 20+ years of intelligence analysis experience, focusing on WMD, counterterrorism, and regional military operations.</p>
         </section>
         <section class="board-member">
-            <h2>Dr. Don Platt</h2>
-            <p>Aerospace expert with extensive experience in satellite design, rocket propulsion, and deep space exploration.</p>
+            <h2><a href="https://www.linkedin.com/in/doplatt/" target="_blank">Dr. Don Platt</a></h2>
+            <p>Seasoned aerospace expert with extensive experience in space systems, satellite design, rocket propulsion, and deep space exploration.</p>
         </section>
     </main>
 </body>

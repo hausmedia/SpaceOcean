@@ -4,22 +4,33 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is applied globally */
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden; /* Prevent horizontal scrolling issues */
 }
 
-/* Full-bleed Background Video/Image */
+/* Full-bleed Background Video */
 .bg-video {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Adjust for full width */
-    height: 100%; /* Adjust for full height */
-    object-fit: cover; /* Ensure video scales correctly */
-    z-index: -1; /* Keep the background behind content */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video scales properly */
+    z-index: -1; /* Keep it behind other content */
+    overflow: hidden;
 }
 
-/* Blur Panel Styling */
+.bg-video iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Right-Aligned Blur Panel */
 .blur-panel {
     position: absolute;
     top: 0;
@@ -32,9 +43,8 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center content vertically */
     color: white;
-    z-index: 1;
+    z-index: 1; /* Ensure it's above the video */
 }
 
 /* Logo and Text Alignment */
@@ -59,87 +69,67 @@ body, html {
 }
 
 .logo-o {
-    height: 5rem; /* Adjust for better visibility */
+    height: 4.75rem; /* Adjust for visual alignment */
     width: auto;
     margin-right: 12px;
 }
 
 .ocean-text {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-weight: 700;
     color: #fff;
-    margin-left: -12px;
+    letter-spacing: 0.1rem;
 }
 
-/* Navigation Links */
-.nav-links {
+/* Login Form Styling */
+.login-form {
     display: flex;
-    gap: 20px;
-    justify-content: flex-end;
+    flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
+.login-form input {
+    margin: 10px 0;
+    padding: 10px;
     font-size: 1rem;
-    padding: 10px 15px;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    background-color: #333;
+    border: 1px solid #444;
     border-radius: 5px;
-}
-
-.nav-links a:hover {
-    color: #00aaff; /* Hover color */
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
-}
-
-.nav-links a.active {
-    background-color: #00aaff; /* Highlight the active page */
     color: white;
+    width: 90%;
+    text-align: left;
 }
 
-/* Mobile Adjustments */
+.login-form button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.login-form button:hover {
+    background-color: #002244;
+}
+
+/* Responsive Adjustments for Mobile */
 @media (max-width: 768px) {
     .blur-panel {
-        width: 90%; /* Expand blur panel for mobile */
-        left: 50%;
+        width: 80%; /* Adjust blur panel width for mobile */
         right: auto;
-        transform: translate(-50%, 0); /* Center panel on smaller screens */
+        left: 50%;
+        transform: translate(-50%, 0); /* Center blur panel */
     }
 
-    .space-text {
-        font-size: 2rem; /* Scale down text size */
+    .login-form input {
+        width: 100%; /* Make inputs fill available space */
     }
 
-    .logo-ocean {
-        flex-direction: column; /* Stack logo and text */
-    }
-
-    .ocean-text {
-        font-size: 2rem; /* Adjust size for better scaling */
-    }
-
-    .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        gap: 10px; /* Adjust spacing */
-        align-items: center;
-    }
-
-    .nav-links a {
-        font-size: 1rem; /* Adjust font size */
-        width: 100%; /* Expand clickable area */
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .blur-panel {
-        height: auto; /* Adjust height for mobile */
-        padding: 10px;
-    }
-
-    .space-text, .ocean-text {
-        font-size: 1.5rem; /* Further scale down text for smaller devices */
+    .login-form button {
+        width: 80%; /* Adjust button width */
     }
 }

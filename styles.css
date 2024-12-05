@@ -1,28 +1,35 @@
-/* Navigation adjustments for mobile */
+/* Full-bleed Background Video/Image */
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures proper scaling */
+    z-index: -1; /* Places the background behind content */
+}
+
+/* Content Wrapper */
+.content {
+    position: relative;
+    z-index: 1; /* Brings content above the background */
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/* Mobile-Specific Adjustments */
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
+    .content {
+        padding: 10px; /* Adjust padding for smaller screens */
     }
 
-    .nav-links {
-        flex-direction: column; /* Stack navigation links */
-        gap: 10px; /* Add spacing between links */
+    .board-title {
+        font-size: 1.5rem; /* Reduce title size for mobile */
     }
 
-    .nav-links a {
-        font-size: 1rem; /* Slightly larger font for mobile */
-        padding: 10px 20px; /* Add padding for easier clicking */
-        display: block; /* Ensure links span the full width */
-        text-align: center; /* Center-align text */
-        width: 100%; /* Make the links responsive */
-        background-color: rgba(0, 0, 0, 0.9); /* Add subtle background for better visibility */
-        border-radius: 5px; /* Optional rounded edges */
-    }
-
-    .nav-links a.active {
-        background-color: #00aaff; /* Highlight active link */
-        color: white; /* Ensure contrast */
+    .board-member p {
+        font-size: 0.9rem; /* Adjust font size for readability */
+        line-height: 1.4;
     }
 }

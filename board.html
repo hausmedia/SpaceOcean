@@ -5,48 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Board of Directors - Space Ocean Corp</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Page Styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        /* Header Logo and Navigation */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .header-logo {
+            height: 50px; /* Rescaled logo for better proportion */
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00aaff;
+        }
+
+        /* Main Content Styling */
+        .main {
+            padding: 40px 20px;
+        }
+
+        .board-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .board-member {
+            margin-bottom: 40px;
+        }
+
+        .board-member h2 {
+            font-size: 1.5rem;
+            color: #00aaff;
+        }
+
+        .board-member p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header class="header">
         <img src="logo-vortext-1.6-square.png" alt="Space Ocean Logo" class="header-logo">
-        <h1>Board of Directors</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="board.html" class="active">Board of Directors</a></li>
-            </ul>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="board.html" class="active">Who We Are</a>
         </nav>
     </header>
-    <main>
-        <section class="board-bios">
-            <article>
-                <h2>Dr. Alberto Vasquez-Marquez</h2>
-                <p>Entrepreneur with 30+ years of experience in business and service chain optimization, focusing on industries like energy, space, and technology.</p>
-            </article>
-            <article>
-                <h2>Alden Fuchs</h2>
-                <p>CTO and systems engineering expert with over 20 years in satellite communications, cognitive radios, and AI-driven innovations.</p>
-            </article>
-            <article>
-                <h2>John W. Kovalsky</h2>
-                <p>President of Space Ocean Corp., specializing in unmanned systems, logistics, and military coordination.</p>
-            </article>
-            <article>
-                <h2>Roxanne Khazarian</h2>
-                <p>Legal strategist with expertise in M&A, global compliance, and international business development.</p>
-            </article>
-            <article>
-                <h2>Gabe Tanenhaus</h2>
-                <p>Chief Content Officer and media innovator with extensive experience in creating and distributing content for major platforms.</p>
-            </article>
-            <!-- Add the rest of the bios here similarly -->
+
+    <!-- Main Content -->
+    <main class="main">
+        <h1 class="board-title">Board of Directors</h1>
+        
+        <!-- Board Members -->
+        <section class="board-member">
+            <h2>Paul S. Mamakos</h2>
+            <p>Founder and CEO of Space Ocean Corp, spearheading innovations in satellite logistics for water transport.</p>
+        </section>
+        <section class="board-member">
+            <h2>Dr. Alberto Vasquez-Marquez</h2>
+            <p>Entrepreneur with 30+ years of experience in business and service chain optimization, focusing on industries like energy, space, and technology.</p>
+        </section>
+        <section class="board-member">
+            <h2>Alden Fuchs</h2>
+            <p>CTO and systems engineering expert with over 20 years in satellite communications, cognitive radios, and AI-driven innovations.</p>
+        </section>
+        <section class="board-member">
+            <h2>John W. Kovalsky</h2>
+            <p>President of Space Ocean Corp., specializing in unmanned systems, logistics, and military coordination.</p>
+        </section>
+        <section class="board-member">
+            <h2>Roxanne Khazarian</h2>
+            <p>Legal strategist with expertise in M&A, global compliance, and international business development.</p>
+        </section>
+        <section class="board-member">
+            <h2>Gabe Tanenhaus</h2>
+            <p>Chief Content Officer and media innovator with extensive experience in creating and distributing content for major platforms.</p>
+        </section>
+        <section class="board-member">
+            <h2>Tri Caodo</h2>
+            <p>Senior Principal Systems Engineer with over 25 years of aerospace experience, specializing in acquisition, test, and evaluation of space systems.</p>
+        </section>
+        <section class="board-member">
+            <h2>Cliff Silver</h2>
+            <p>Accomplished CFO with over 20 years of financial leadership experience, focusing on driving profitability and corporate growth.</p>
+        </section>
+        <section class="board-member">
+            <h2>Pete Freeland</h2>
+            <p>Veteran aerospace designer and operator with 35+ years of experience in spacecraft, research vehicles, and satellite programs.</p>
+        </section>
+        <section class="board-member">
+            <h2>Michael Huber</h2>
+            <p>Chief Innovation Officer with 20+ years of intelligence analysis experience, focusing on WMD and counterterrorism innovation strategies.</p>
+        </section>
+        <section class="board-member">
+            <h2>Dr. Don Platt</h2>
+            <p>Aerospace expert with extensive experience in satellite design, rocket propulsion, and deep space exploration.</p>
         </section>
     </main>
-    <footer class="footer">
-        <p>© 2024 Space Ocean Corp. All rights reserved.</p>
-    </footer>
 </body>
 </html>

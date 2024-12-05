@@ -1,35 +1,145 @@
+/* Ensure Entire Page Background is Black */
+body, html {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif; /* Ensure Montserrat is applied globally */
+    overflow-x: hidden; /* Prevent horizontal scrolling issues */
+}
+
 /* Full-bleed Background Video/Image */
 .bg-video {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures proper scaling */
-    z-index: -1; /* Places the background behind content */
+    width: 100%; /* Adjust for full width */
+    height: 100%; /* Adjust for full height */
+    object-fit: cover; /* Ensure video scales correctly */
+    z-index: -1; /* Keep the background behind content */
 }
 
-/* Content Wrapper */
-.content {
-    position: relative;
-    z-index: 1; /* Brings content above the background */
-    text-align: center;
-    color: white;
+/* Blur Panel Styling */
+.blur-panel {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 25%;
+    height: 100vh;
     padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    color: white;
+    z-index: 1;
 }
 
-/* Mobile-Specific Adjustments */
+/* Logo and Text Alignment */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.space-text {
+    font-weight: 300;
+    font-size: 2.7rem;
+    color: #fff;
+    margin-bottom: -0.5rem;
+}
+
+.logo-ocean {
+    display: flex;
+    align-items: center;
+}
+
+.logo-o {
+    height: 5rem; /* Adjust for better visibility */
+    width: auto;
+    margin-right: 12px;
+}
+
+.ocean-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-left: -12px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    color: #00aaff; /* Hover color */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
+}
+
+.nav-links a.active {
+    background-color: #00aaff; /* Highlight the active page */
+    color: white;
+}
+
+/* Mobile Adjustments */
 @media (max-width: 768px) {
-    .content {
-        padding: 10px; /* Adjust padding for smaller screens */
+    .blur-panel {
+        width: 90%; /* Expand blur panel for mobile */
+        left: 50%;
+        right: auto;
+        transform: translate(-50%, 0); /* Center panel on smaller screens */
     }
 
-    .board-title {
-        font-size: 1.5rem; /* Reduce title size for mobile */
+    .space-text {
+        font-size: 2rem; /* Scale down text size */
     }
 
-    .board-member p {
-        font-size: 0.9rem; /* Adjust font size for readability */
-        line-height: 1.4;
+    .logo-ocean {
+        flex-direction: column; /* Stack logo and text */
+    }
+
+    .ocean-text {
+        font-size: 2rem; /* Adjust size for better scaling */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Adjust spacing */
+        align-items: center;
+    }
+
+    .nav-links a {
+        font-size: 1rem; /* Adjust font size */
+        width: 100%; /* Expand clickable area */
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .blur-panel {
+        height: auto; /* Adjust height for mobile */
+        padding: 10px;
+    }
+
+    .space-text, .ocean-text {
+        font-size: 1.5rem; /* Further scale down text for smaller devices */
     }
 }
